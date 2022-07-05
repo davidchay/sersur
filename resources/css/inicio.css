@@ -1,0 +1,234 @@
+.seccion, .seccion-alt {
+    @apply py-28;
+}
+.seccion {
+    @apply bg-white;
+}
+
+.subtitulo {
+    @apply font-title text-lg font-bold text-primary uppercase;
+}
+
+.titulo {
+    @apply font-title text-4xl font-bold mb-5 text-secondary;
+}
+.boton-verde{
+    @apply mt-20 bg-primary text-white py-3 px-6 tracking-wider uppercase hover:bg-primary-dark  transition-all duration-150;
+
+} 
+
+/**
+Seccion acerc de nosotros
+*/
+
+/* .image-feature img {
+    @apply relative ml-auto w-full lg:w-10/12;
+
+    &::after {
+        @apply absolute -left-7 h-full w-full -bottom-7 bg-primary;
+        
+    }
+} */
+
+
+
+.service-card, .service-card-alt {
+    @apply px-5 relative text-base flex bg-white rounded-lg shadow-lg hover:shadow-xl h-80 transition-all ease-in-out delay-150;
+}
+.service-card_overlay {
+  @apply absolute z-0 top-0 right-0 rounded-lg bg-primary w-full h-[3px];
+}
+.service-card-alt .service-card_overlay {
+  @apply absolute z-0 top-0 right-0 rounded-lg bg-secondary w-full h-[3px];
+}
+.service-card_content{
+    @apply z-20 relative my-auto;
+} 
+
+
+.service-card_content-icon {
+    @apply text-primary;
+}
+.service-card-alt .service-card_content-icon {
+    @apply text-secondary;
+}
+
+.service-card_content-button {
+    @apply inline-block mt-5 bg-primary text-white py-3 px-6 rounded-full  transition-all duration-200;
+}
+.service-card-alt .service-card_content-button {
+    @apply inline-block mt-5 bg-secondary text-white py-3 px-6 rounded-full  transition-all duration-200;
+}
+
+
+.service-card:hover .service-card_overlay,
+.service-card-alt:hover .service-card_overlay {
+    @apply h-full transition-all ease-in-out delay-150; 
+}
+
+.service-card:hover .service-card_content,
+.service-card:hover .service-card_content h3,
+.service-card:hover .service-card_content-icon,
+.service-card-alt:hover .service-card_content,
+.service-card-alt:hover .service-card_content h3,
+.service-card-alt:hover .service-card_content-icon {
+    @apply text-white transition-all ease-in-out delay-150;
+}
+
+.service-card:hover .service-card_content-button {
+    @apply bg-white text-primary transition-all ease-in-out delay-150;
+}
+.service-card-alt:hover .service-card_content-button {
+    @apply bg-white text-secondary transition-all ease-in-out delay-150;
+}
+.service-card:hover .service-card_content-button:hover {
+    @apply bg-primary-dark text-white transition-all ease-in-out delay-150;
+}
+.service-card-alt:hover .service-card_content-button:hover {
+    @apply bg-secondary-dark text-white transition-all ease-in-out delay-150;
+}
+
+
+/*
+* Ubicacion card
+*/
+
+.flip-ubicacion {
+    @apply bg-transparent h-56 lg:h-auto relative w-full ;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-ubicacion-inner {
+    @apply relative w-full h-full text-center transition transform delay-150;
+    transform-style: preserve-3d;
+}
+
+.flip-ubicacion:hover .flip-ubicacion-inner,
+.flip-ubicacion:active .flip-ubicacion-inner,
+.flip-ubicacion:focus .flip-ubicacion-inner {
+    
+    transform: rotateY(180deg); 
+    
+}
+
+.flip-ubicacion-front, .flip-ubicacion-back {
+    @apply absolute w-full h-full flex flex-col justify-items-center justify-center p-2 ;
+    backface-visibility: hidden;
+}
+
+.flip-ubicacion-back {
+    @apply  text-white overflow-y-hidden;
+    transform: rotateY(180deg);
+}
+
+
+    .openMapLeaft {
+        @apply absolute inset-0 bg-transparent m-0 p-0 ;
+    }
+
+
+.overlayMap {
+    @apply fixed inset-0 w-full h-full grid justify-items-center content-center bg-black bg-opacity-25 z-50;
+}
+
+.cerrarModal {
+    @apply bg-white flex items-center justify-center rounded-full w-12 h-12 mt-2; 
+}
+.cerrarModal {
+    @apply cursor-pointer;
+}
+
+/**
+**
+** Logo carousel
+**
+**/
+
+.logo-border {
+    @apply border-2;
+}
+
+.logo-rounded {
+    @apply rounded-md;
+}
+
+
+
+.logo-hover-style_1 .label {
+    @apply absolute inset-0 w-full h-full bg-black/50 hidden transition-all delay-150 ease-in-out;
+}
+
+.logo-hover-style_1:hover .label {
+    @apply flex items-center justify-center font-bold text-lg text-white ;
+}
+
+
+
+.logo-hover-style_2 {
+    @apply border-4 overflow-hidden  transition-all delay-100 ease-linear;
+}
+
+.logo-hover-style_2:hover {
+    @apply border-black items-end justify-end;
+}
+
+.logo-hover-style_2 .label {
+    @apply absolute inset-x-0 -bottom-full text-center  p-1 m-0 w-full h-10 bg-black text-lg text-white transition-all ease-linear;
+}
+
+.logo-hover-style_2:hover .label {
+    @apply bottom-0;
+}
+
+
+.logo-hover-style_3{
+    @apply border-4 transition-all delay-150 ease-linear;
+}
+
+.logo-hover-style_3:hover {
+    @apply border-primary;
+}
+
+.logo-hover-style_3 img{
+    @apply grayscale;
+}
+.logo-hover-style_3:hover img{
+    @apply grayscale-0;
+}
+.logo-hover-style_3 .label {
+    @apply absolute bottom-2 z-50 rounded-full text-white m-0 py-1 px-2 text-sm bg-primary/90 hidden transition-all delay-150 ease-in-out;
+} 
+.logo-hover-style_3:hover .label {
+    @apply flex items-center justify-center mx-auto;
+    z-index: 9999999;
+} 
+
+
+
+
+.logo-hover-style_4 {
+    @apply overflow-hidden shadow-inner;
+}
+.logo-hover-style_4 img {
+    @apply transition-all delay-150 ease-in-out scale-75;
+}
+.logo-hover-style_4 .label {
+    @apply hidden;
+} 
+.logo-hover-style_4:hover {
+    @apply shadow-none;
+}
+.logo-hover-style_4:hover img{
+    @apply scale-105;
+}
+
+
+/*
+* wpform 
+* formulario de contacto
+*/
+.wpforms-form input[type=submit], 
+.wpforms-form button[type=submit] {
+
+    @apply bg-primary rounded border-primary-dark text-white hover:bg-primary-dark !important;
+
+}

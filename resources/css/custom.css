@@ -1,0 +1,124 @@
+html {
+    @apply bg-gray-50;
+ }
+ body {
+    @apply font-text;
+ }
+ h1, h2, h3, h4, h5  {
+    @apply font-title;
+ } 
+ 
+
+
+.single .alignfull {
+  @apply m-auto w-full max-w-none !important;
+}
+
+#navUser > a{
+    @apply block px-4 py-2 hover:bg-gray-100  hover:text-gray-800;
+}
+
+#primary-menu .current_page_item a {
+    @apply decoration-secondary;
+}
+
+
+/* article > *:not(.entry-content ):not(.entry-header ),
+.entry-content > * {
+     @apply mx-auto max-w-content; 
+} */
+
+
+.bgImage{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.entry-content, 
+.block-editor-block-list__layout {
+    
+
+    h1 {
+        @apply text-4xl font-bold;
+    }
+
+    h2 {
+        @apply text-3xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-medium;
+    }
+
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-8;
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+
+    /*helper class*/
+    my-0 {
+       @apply my-0 !important;
+    }
+
+
+
+    /*blocks*/
+    .wp-block-columns.alignfull.my-0 {
+       margin-top: 0 !important;
+       margin-bottom: 0 !important;
+
+    }
+
+    .wp-block-button {
+        .wp-block-button__link {
+            @apply bg-primary rounded-none;
+            &:hover {
+                @apply bg-primary-dark;
+            }
+        }
+        
+        &.is-style-outline {
+            .wp-block-button__link {
+                @apply border-primary text-primary bg-transparent;
+                &:hover {
+                    @apply bg-primary text-white;
+                }
+            }
+        }
+
+        
+
+    } 
+
+
+
+}
+
+
+/*pdfjs-fullscreen*/
+.pdfjs-fullscreen {
+    @apply text-right my-3;
+}
+.pdfjs-fullscreen a {
+    @apply py-2 px-4 rounded bg-secondary hover:bg-secondary-dark text-white;
+}

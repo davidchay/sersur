@@ -1,0 +1,12 @@
+aside .widget ul {
+    @apply divide-y divide-gray-100 ;
+}
+aside .widget ul li {
+    @apply flex justify-between items-center;
+}
+aside .widget ul li a {
+    @apply block py-3 ;
+}
+aside .widget ul li a:hover {
+    @apply text-secondary;
+}

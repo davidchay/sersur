@@ -1,0 +1,39 @@
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    @apply font-sans;
+}
+
+.wp-block{
+    @apply max-w-screen-xl;
+}
+
+.wp-block[data-align=wide] {
+    @apply max-w-screen-xl;
+}
+
+.wp-block[data-align=full] {
+    @apply max-w-full;
+}
+
+.wp-block-button {
+    .wp-block-button__link {
+        @apply bg-primary rounded-none;
+        &:hover {
+            @apply bg-primary-dark;
+        }
+    }
+    
+    &.is-style-outline {
+        .wp-block-button__link {
+            @apply border-primary text-primary bg-transparent;
+            &:hover {
+                @apply bg-primary text-white;
+            }
+        }
+    }
+
+   
+
+} 

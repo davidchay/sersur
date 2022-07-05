@@ -1,0 +1,48 @@
+
+
+.comments-area .comment-list .comment {
+    @apply p-5 rounded ;
+} 
+.comments-area .comment-list .comment.alt {
+    @apply bg-gray-100;
+}
+.comments-area .comment-list .comment > .children{
+    @apply ml-4 mt-4 ;
+}
+
+.comments-area .comment-list .comment .comment-body{
+    @apply relative;
+}
+.comments-area .comment-list .comment .comment-meta {
+    @apply flex flex-col-reverse;
+}
+    .comments-area .comment-list .comment .comment-meta .comment-author {
+        @apply flex justify-start items-center gap-4;
+    }
+        .comments-area .comment-list .comment .comment-meta .comment-author img {
+            @apply rounded-full row-span-2;
+        }
+        .comments-area .comment-list .comment .comment-meta .comment-author b {
+            @apply font-title font-bold ;
+        }
+    .comments-area .comment-list .comment .comment-meta .comment-metadata {
+        @apply inline-block p-2 rounded-lg text-sm italic ;
+    }
+    .comments-area .comment-list .comment .comment-content {
+        @apply p-3 ml-16;
+    }
+    .comments-area .comment-list .comment .reply {
+        @apply absolute top-0 right-0;
+    }
+        .comments-area .comment-list .comment .reply .comment-reply-link{
+            @apply bg-secondary rounded-full py-2 px-4 text-white text-sm ml-auto inline-block hover:bg-secondary-dark;
+        }
+
+
+
+.comment-respond {
+    @apply bg-white rounded-xl shadow-lg p-5 mt-20; 
+}
+.comment-respond .comment-reply-title{
+    @apply text-2xl font-bold font-title my-4; 
+}
